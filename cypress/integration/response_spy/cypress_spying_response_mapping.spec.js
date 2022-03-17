@@ -3,7 +3,7 @@ describe('Web Automation', function () {
 
         cy.intercept('POST', '/api/accommodation/property/search').as('searchAPI');
 
-        cy.visit("https://next-staging.almosafer.com/mweb/chalets/search?cityId=24&lang=en");
+        cy.visit("https://almosafer.com/mweb/chalets/search?cityId=24&lang=en");
 
         cy.get('[data-testid=searchResults_PropertyCard_0_name]').then(($div) => {
             let propertyName = $div.text();
